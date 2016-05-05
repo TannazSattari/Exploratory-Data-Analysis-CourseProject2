@@ -20,7 +20,7 @@ data <- aggregate(subData$Emissions,by=list(subData[,5],subData[,6]),FUN =sum)
 #drawing the barplot
 par(mar=c(4,4,3,2))
 png('plot3.png')
-g <- ggplot(data, aes(x=data[,2], y=data[,3], color = data[,1]))
+g <- ggplot(data, aes(x=data[,2], y=data[,3], fill = factor(data[,1])))
 g <- g + geom_line() +
   xlab("year") +
   ylab(expression('Total PM2.5 Emissions')) +

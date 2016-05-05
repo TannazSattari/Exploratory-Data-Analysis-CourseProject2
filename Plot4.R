@@ -19,6 +19,6 @@ data <- tapply(coalSubData$Emissions,coalSubData$year,FUN=sum)
 as.data.frame(data)
 
 png("plot4.png")
-barplot(data,xlab = "year",ylab="Total emissions from PM2.5",col=3,main = "Total emissions from coal combustion-related sources \n in the United states from 1999 to 2008" )
+barplot(data,xlab = "year",ylab="Total emissions from PM2.5",col=2,main = "Total emissions from coal combustion-related sources \n in the United states from 1999 to 2008" )
 dev.off()
 
